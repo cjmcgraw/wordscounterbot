@@ -1,0 +1,11 @@
+user: /u/{{ user_name }}
+
+total comments: {{ total_comments }}
+bad words:
+
+{%- for word, n in bad_words.most_common(10) %}
+    {{word}}: {{n}}
+{%- endfor %}
+
+total bad words: {{ total_bad_words }}
+profanity rating: {{ total_bad_words / total_words }}
